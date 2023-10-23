@@ -1,0 +1,39 @@
+Q1. Accept two number from user and do the sum of it
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp8
+{
+   
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            string x;
+            string y;
+            Console.WriteLine("Enter two number");
+            x = Console.ReadLine();
+            y = Console.ReadLine();
+
+            int a = int.Parse(x);
+            int b= int.Parse(y);
+            Console.WriteLine(a + b);
+
+            int d = Convert.ToInt32(x);
+            int e = Convert.ToInt32(y);
+            Console.WriteLine(d + e);
+
+            int r, s;
+            bool a1=int.TryParse(x,out  r);
+            bool a2 = int.TryParse(y, out s);
+            if (a1 && a2)
+                Console.WriteLine($"Sum using tryparse:{r + s}");
+            else
+                Console.WriteLine("valid Entery required");
+        }
+    }
+}
