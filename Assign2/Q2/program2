@@ -1,0 +1,35 @@
+Q2. Accept a float value and print square of that number
+Solve above code using Parse(), ToSingle() and TryPrase() method.
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp8
+{
+
+    internal class Program2
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter a float number");
+            string x = Console.ReadLine();
+
+            float a = float.Parse(x);
+            Console.WriteLine(a*a);
+
+            float d = Convert.ToSingle(x);
+            Console.WriteLine(d*d);
+
+            float r;
+            bool a1 = float.TryParse(x, out r);
+            if (a1)
+                Console.WriteLine($"Sqr using tryparse:{r*r}");
+            else
+                Console.WriteLine("valid Entery required");
+        }
+    }
+}
